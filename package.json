@@ -1,0 +1,26 @@
+{
+  "name": "koa-wb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "compile": "webpack && node build/backend.js",
+    "dev": "nodemon -e ts --exec \"npm run compile\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-router": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-router": "^7.0.22",
+    "@types/node": "^7.0.29",
+    "ts-loader": "^2.1.0",
+    "ts-node": "^3.0.6",
+    "typescript": "^2.3.4",
+    "webpack": "^2.6.1",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
