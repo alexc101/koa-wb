@@ -1,28 +1,28 @@
 import * as Router from 'koa-router';
 
-const indexRouter = new Router();
+const userRouter = new Router({prefix: '/user'});
 
 class Greeter {
     constructor(public name: string) {
     }
 }
 
-indexRouter
+userRouter
     .get('/', async (ctx, next) => {
 
-        const helloTS = new Greeter('default14');
+        const helloTS = new Greeter('user1');
 
         await ctx.render('index', {name: helloTS.name})
 
     })
-    .get('/home', async (ctx, next) => {
+    .get('/2', async (ctx, next) => {
 
-        const helloTS = new Greeter('home');
+        const helloTS = new Greeter('user2');
 
         await ctx.render('index', {name: helloTS.name})
 
     })
 
+export default userRouter;
 
 
-export default indexRouter;
